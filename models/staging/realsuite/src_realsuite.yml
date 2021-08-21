@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+ - name: realsuite
+   description: realsuite application database ODS
+   database: BGIS_EDW_QA
+   schema: ODS
+   loader: red
+   loaded_at_field: dss_update_time
+
+   tables:
+     - name: client
+       identifier: psa_client_ods_realsuite
+       columns:
+        - name: id
+          tests:
+           - unique
+
+     - name: rfin_moduleoption
+       identifier: psa_rfin_moduleoption_ods_realsuite
+
+     - name: rpro_moduleoption
+       identifier: psa_rpro_moduleoption_ods_realsuite

@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+ - name: mdm
+   description: bgis mdm data
+   database: BGIS_EDW_QA
+   schema: ODS
+   loader: red
+   loaded_at_field: dss_update_time
+
+   tables:
+     - name: client_industry
+       identifier: psa_benchmark_view_client_industry
+       columns:
+        - name: client_id
+          tests:
+           - unique
