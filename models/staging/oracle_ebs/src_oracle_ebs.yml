@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+ - name: oracle_ebs
+   description: oracle ebs application database 
+   database: BGIS_EDW_QA
+   schema: ODS
+   loader: RED
+   loaded_at_field: dss_update_time
+
+   tables:
+     - name: gl_periods
+       identifier: psa_bljc_edw_gl_periods_v_oracle_ebs

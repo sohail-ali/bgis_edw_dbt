@@ -5,19 +5,42 @@ sources:
    description: realsuite application database ODS
    database: BGIS_EDW_QA
    schema: ODS
-   loader: red
+   loader: RED
    loaded_at_field: dss_update_time
 
    tables:
      - name: client
        identifier: psa_client_ods_realsuite
-       columns:
-        - name: id
-          tests:
-           - unique
 
      - name: rfin_moduleoption
        identifier: psa_rfin_moduleoption_ods_realsuite
 
      - name: rpro_moduleoption
        identifier: psa_rpro_moduleoption_ods_realsuite
+
+     - name: rfin_fiscalperiod
+       identifier: psa_rfin_fiscalperiod_ods_realsuite
+
+     - name: rfin_fiscalyear
+       identifier: psa_rfin_fiscalyear_ods_realsuite
+
+     - name: prj_period
+       identifier: psa_prj_period_ods_realsuite
+
+     - name: ast_project
+       identifier: psa_ast_project_ods_realsuite
+
+     - name: ast_comment_item
+       identifier: psa_ast_comment_item_ods_realsuite
+
+     - name: equipment
+       identifier: psa_equipment_ods_realsuite
+
+     - name: ast_zone
+       identifier: psa_ast_zone_ods_realsuite
+
+     - name: ast_uniformat
+       identifier: psa_ast_uniformat_ods_realsuite
+
+     - name: lookup_code
+       identifier: psa_lookup_code_ods_realsuite

@@ -18,16 +18,16 @@ renamed as (
         pa_organization_id,
         woprefix,
         contract_mgr,
-        created_on,
+        created_on as created_date,
         created_by,
-        updated_on,
+        updated_on as updated_date,
         updated_by,
         accounting_org_code,
         theme,
         culture,
         validationcode,
-        cdc_modified_datetime,
-        decode(ifnull(cdc_softdelete_flag,''),'D','Y','N') as cdc_softdelete_flag
+        {{ cdc_timestamp_col() }},
+        {{ cdc_softdelete_col() }} 
     from source
 
 )

@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: ebs__gl_periods_corp
+    tests: 
+     - dbt_utils.unique_combination_of_columns:
+         combination_of_columns:
+           - period_name
+           - start_date

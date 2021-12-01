@@ -12,10 +12,10 @@ renamed as (
         building_area_uom,
         land_area_uom,
         land_elevation_uom,
-        cdc_modified_datetime,
-        decode(ifnull(cdc_softdelete_flag,''),'D','Y','N') as cdc_softdelete_flag
+        {{ cdc_timestamp_col() }}
     from source
-
+    where 
+      {{ cdc_softdelete_filter() }}
 )
 
 select * from renamed

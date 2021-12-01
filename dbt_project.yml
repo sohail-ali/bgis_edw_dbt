@@ -25,15 +25,16 @@ quoting:
 seeds:
   bgis_edw_dbt:
     +enabled: true
-    +schema: stage
-    # Thi configures data/lease_client.csv
-    lease_client:
-      +alias: lease_client
+    +schema: ods
+    # This configures data/lease_client_flag.csv
+    lease_exclude_client:
+      +alias: csv__lease_exclude_client
       +column_types:
         client_id: number
 
-    pds_client:
-      +alias: pds_client
+    # This configures data/pds_client.csv
+    pds_include_client:
+      +alias: csv__pds_include_client
       +column_types:
         client_id: number
 
@@ -43,23 +44,23 @@ models:
 
   bgis_edw_dbt:
       staging:
-        realsuite:
-          +materialized: view
-          +schema: stage
-        mdm:
-          +materialized: view
-          +schema: stage
-
+        +materialized: view
+        +schema: ods
 
       marts:
-        core:
-          +materialized: incremental
-          +schema: edw
+        +materialized: table
+        +transient: false
+        +schema: edw
 
+        core:
           intermediate:
             +materialized: view
             +schema: stage
 
+        asset:
+          intermediate:
+            +materialized: view
+            +schema: stage
 
         
 

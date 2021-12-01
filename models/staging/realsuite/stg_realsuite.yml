@@ -1,21 +1,21 @@
 version: 2
 
 models:
-  - name: stg_client
+  - name: rs__client
     columns:
       - name: client_id
         description: Primary key of the table
         tests:
           - unique
           - not_null
-  - name: stg_rfin_moduleoption
+  - name: rs__rfin_moduleoption
     columns:
       - name: client_id
         tests:
           - unique
           - not_null
 
-  - name: stg_rpro_moduleoption
+  - name: rs__rpro_moduleoption
     columns:
       - name: client_id
         tests:
