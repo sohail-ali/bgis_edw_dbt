@@ -44,3 +44,12 @@ sources:
 
      - name: lookup_code
        identifier: psa_lookup_code_ods_realsuite
+
+     - name: ast_asset
+       identifier: psa_ast_asset_ods_realsuite
+
+     - name: ast_region
+       identifier: psa_ast_region_ods_realsuite
+
+     - name: ast_building_value
+       identifier: psa_ast_building_value_ods_realsuite

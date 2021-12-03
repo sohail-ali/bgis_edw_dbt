@@ -18,14 +18,11 @@ renamed as (
         pa_organization_id,
         woprefix,
         contract_mgr,
-        created_on as created_date,
-        created_by,
-        updated_on as updated_date,
-        updated_by,
         accounting_org_code,
         theme,
         culture,
         validationcode,
+        {{ rs_audit_col() }},
         {{ cdc_timestamp_col() }},
         {{ cdc_softdelete_col() }} 
     from source

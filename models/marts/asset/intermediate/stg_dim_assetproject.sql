@@ -1,4 +1,13 @@
-with dim_assetproject as (
+with ast_project_comment as (
+    select 
+        object_id as asset_project_id,
+        comment
+    from {{ ref('stg_wrk_ast_comment_pivot')}} 
+    where 
+        object_class = 'AST_PROJECT'
+)
+
+, dim_assetproject as (
     select 
         cast(hash(p.asset_project_id) as number(38)) as assetproject_key,
         p.asset_project_id,
@@ -13,7 +22,7 @@ with dim_assetproject as (
         p.softdelete_flag
     from 
         {{ ref('rs__ast_project') }} p 
-    left join {{ ref('stg_dim_assetproject_comment') }} c on 
+    left join ast_project_comment c on 
         p.asset_project_id = c.asset_project_id 
 )
 

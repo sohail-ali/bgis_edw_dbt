@@ -17,14 +17,11 @@ renamed as (
         priority as assetproject_priority,
         sub_program_id,
         capital_project_id,
-        createdby,
-        createdon as created_date,
-        updatedby,
-        updatedon as updated_date,
         category as assetproject_category,
         adjustments,
         scope_of_work,
         justification,
+        {{ rs_audit_col() }},
         {{ cdc_timestamp_col() }},
         {{ cdc_softdelete_col() }} 
     from source

@@ -1,3 +1,3 @@
 select
-  {{ dbt_utils.star(source('realsuite', 'lookup_code')) }}
-from {{ source('realsuite', 'lookup_code') }}
+  {{ dbt_utils.star(source('realsuite', 'ast_building_value')) }}
+from {{ source('realsuite', 'ast_building_value') }}

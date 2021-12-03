@@ -11,10 +11,7 @@ renamed as (
         building_id,
         zone_name as assetzone_name,
         status as assetzone_status,
-        createdon as created_date,
-        createdby,
-        updatedon as updated_date,
-        updatedby,
+        {{ rs_audit_col() }},
         {{ cdc_timestamp_col() }},
         {{ cdc_softdelete_col() }} 
     from source

@@ -14,11 +14,7 @@ renamed as (
         client_id,
         default_flag,
         system_code,
-        lookup_sortcode,    
-        created_on as created_date,
-        created_by,
-        updated_on as updated_date,
-        updated_by,
+        lookup_sortcode,
         {{ cdc_timestamp_col() }}
     from source
     where {{ cdc_softdelete_filter() }} 
