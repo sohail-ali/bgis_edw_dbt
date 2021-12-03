@@ -14,7 +14,7 @@ renamed as (
         ifnull(replacement_responsibility,'N') as replacement_responsibility,
         is_estimated_inst_date,
         ifnull(practical_life_adjustment,0) as practical_life_adjustment,
-        field_replacement_estimate,
+        cast(field_replacement_estimate as number(12,2)) as field_replacement_estimate,
         date(field_estimate_date) as field_estimate_date ,
         asset_project_id,
         age_vs_service_life,

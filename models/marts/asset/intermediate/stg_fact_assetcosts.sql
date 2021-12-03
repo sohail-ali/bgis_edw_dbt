@@ -22,7 +22,7 @@ ast_asset as (
             eqnum as building_item_number,
             client_eqnum as client_building_item_number,
             status,
-            building_item_zone_id as asset_zone_id,
+            building_item_zone_id as assetzone_id,
             description,
             install_date as installation_date,
             actual_decomissioned_date as decomissioned_date,
@@ -54,7 +54,7 @@ ast_asset as (
 , asset_comment as (
     select 
         object_id as asset_id,
-        comment
+        comment as asset_comments
     from {{ ref('stg_wrk_ast_comment_pivot')}} 
     where 
         object_class = 'AST_ASSET'
@@ -63,7 +63,7 @@ ast_asset as (
 , building_asset_value as (
     select
         building_id,
-        ifnull(asset_region_price_offset,1) as asset_region_price_offset
+        asset_region_price_offset as asset_region_price_offset
     from {{ ref('stg_wrk_building_asset_value')}} 
 )
 
@@ -71,7 +71,7 @@ ast_asset as (
     select
         client_id,
         lookup_value as criticality_code,
-        lookup_definition as building_item_criticality
+        cast(lookup_definition as varchar(4000)) as building_item_criticality
     from {{ ref('rs__lookup_code') }} 
     where 
         lookup_type_class ='RCND.EQUIPMENT_CRITICALITY'       
@@ -93,20 +93,20 @@ ast_asset as (
         a.material_quantity,
         a.client_replacement_responsibility_ind,
         u.practical_life + a.practical_life_adjustment as practical_life_adjustment,
-        ifnull(a.field_replacement_estimate,0) as field_replacement_estimate,
+        ifnull(a.field_replacement_estimate,0) as field_replacement_estimate_cost,
         a.field_estimate_date,
         e.status,
-        e.asset_zone_id,
+        e.assetzone_id,
         u.material_type,
         u.mean_service_life,
         u.practical_life,
         u.unit_price,
         u.uom,
-        ac.comment,
+        ac.asset_comments,
         e.description,
         asset_region_price_offset,
-        u.unit_price * material_quantity * av.asset_region_price_offset as replacement_cost,
-        ifnull(field_replacement_estimate,replacement_cost) as adjusted_replacement_cost,
+        cast(u.unit_price * material_quantity * ifnull(av.asset_region_price_offset,1) as number(18,4)) as replacement_cost,
+        cast(ifnull(field_replacement_estimate,replacement_cost) as number(12,2)) as adjusted_replacement_cost,
         installation_date,
         upper(monthname(installation_date)) ||'-'|| year(installation_date) as installation_full_month,
         dateadd(year,practical_life ,installation_date) as practicallife_replacement_date,

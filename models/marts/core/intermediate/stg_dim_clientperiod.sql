@@ -104,7 +104,7 @@ curr_accounting_period as (
 
 , dim_clientperiod as (
     select 
-      cast(hash(client_id,full_month_name) as number(38)) as clientperiod_key,
+      {{ surrogate_key('client_id','full_month_name') }} as clientperiod_key,
       client_id,
       cast(fiscal_year as number) as fiscal_year,
       cast(fiscal_quarter as number) as fiscal_quarter,

@@ -22,7 +22,7 @@ renamed as (
         theme,
         culture,
         validationcode,
-        {{ rs_audit_col() }},
+        {{ rs_audit_col('',2) }},
         {{ cdc_timestamp_col() }},
         {{ cdc_softdelete_col() }} 
     from source
