@@ -21,9 +21,8 @@ renamed as (
         adjustments,
         scope_of_work,
         justification,
-        {{ rs_audit_col() }},
-        {{ cdc_timestamp_col() }},
-        {{ cdc_softdelete_col() }} 
+        {{ rs_audit_cols(source('realsuite', 'ast_project')) }},
+        {{ cdc_audit_cols(source('realsuite', 'ast_project')) }}
     from source
 )
 

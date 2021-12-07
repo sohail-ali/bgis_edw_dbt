@@ -10,11 +10,11 @@ renamed as (
         region_name,
         cast(round(price_offset,4) as number(12,5)) as asset_region_price_offset,
         status,
-        {{ rs_audit_col() }},
-        {{ cdc_timestamp_col() }}
+        {{ rs_audit_cols(source('realsuite', 'ast_region')) }},
+        {{ cdc_audit_cols(source('realsuite', 'ast_region')) }}
     from source
     where
-    {{ cdc_softdelete_filter() }} 
+        softdelete_flag='N'
 )
 
 select * from renamed

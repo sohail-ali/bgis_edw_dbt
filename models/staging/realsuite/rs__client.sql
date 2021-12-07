@@ -6,8 +6,7 @@ with source as (
 
 renamed as (
     
-    select
-        id as client_id,
+    select id as client_id,
         name as client_name,
         desciption as description,
         fiscal_year,
@@ -22,9 +21,8 @@ renamed as (
         theme,
         culture,
         validationcode,
-        {{ rs_audit_col('',2) }},
-        {{ cdc_timestamp_col() }},
-        {{ cdc_softdelete_col() }} 
+        {{ rs_audit_cols(source('realsuite', 'client')) }},
+        {{ cdc_audit_cols(source('realsuite', 'client')) }}
     from source
 
 )

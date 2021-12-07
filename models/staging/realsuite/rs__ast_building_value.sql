@@ -11,11 +11,11 @@ renamed as (
         cast(interior_value as number(12,2)) as interior_replacement_value_dollars_per_sq,
         cast(shell_value as number(12,2)) as shell_replacement_value_dollars_per_sqft,
         cast(ffe_value as number(12,2)) as ff_and_e_replacement_value_dollars_per_sqft,
-        {{ rs_audit_col() }},
-        {{ cdc_timestamp_col() }}
+        {{ rs_audit_cols(source('realsuite', 'ast_building_value')) }},
+        {{ cdc_audit_cols(source('realsuite', 'ast_building_value')) }}
     from source
     where
-        {{ cdc_softdelete_filter() }} 
+        softdelete_flag='N'
 )
 
 select * from renamed

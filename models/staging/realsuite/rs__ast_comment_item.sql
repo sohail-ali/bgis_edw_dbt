@@ -11,12 +11,11 @@ renamed as (
         object_class,
         object_id,
         note,
-        createby as createdby,
-        createdon as created_date,
-        {{ cdc_timestamp_col() }}
+        {{ rs_audit_cols(source('realsuite', 'ast_comment_item')) }},
+        {{ cdc_audit_cols(source('realsuite', 'ast_comment_item')) }}
     from source
     where 
-        {{ cdc_softdelete_filter() }} 
+        softdelete_flag='N'
 )
 
 select * from renamed

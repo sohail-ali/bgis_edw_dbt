@@ -19,10 +19,11 @@ renamed as (
         to_date(last_reopendate) as last_reopendate,
         to_date(rprj_plan_startdate) as rprj_plan_startdate,
         to_date(rprj_plan_enddate) as rprj_plan_enddate,
-        {{ cdc_timestamp_col() }}
+        {{ rs_audit_cols(source('realsuite', 'rfin_fiscalyear')) }},
+        {{ cdc_audit_cols(source('realsuite', 'rfin_fiscalyear')) }}
     from source
     where 
-        {{ cdc_softdelete_filter() }}
+        softdelete_flag='N'
 )
 
 select * from renamed

@@ -28,9 +28,8 @@ renamed as (
         responsibility_other,
         action_category,
         capital_planning,
-        {{ rs_audit_col() }},
-        {{ cdc_timestamp_col() }},
-        {{ cdc_softdelete_col() }} 
+        {{ rs_audit_cols(source('realsuite', 'ast_asset')) }},
+        {{ cdc_audit_cols(source('realsuite', 'ast_asset')) }}
     from source
 
 )

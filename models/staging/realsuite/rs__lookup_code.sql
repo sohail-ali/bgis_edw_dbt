@@ -15,9 +15,10 @@ renamed as (
         default_flag,
         system_code,
         lookup_sortcode,
-        {{ cdc_timestamp_col() }}
+        {{ cdc_audit_cols(source('realsuite', 'lookup_code')) }}
     from source
-    where {{ cdc_softdelete_filter() }} 
+    where 
+        softdelete_flag='N'
 
 )
 

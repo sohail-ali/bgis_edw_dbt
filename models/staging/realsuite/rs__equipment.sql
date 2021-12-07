@@ -207,9 +207,8 @@ renamed as (
         date(seasonalenddate) as seasonalend_date,
         special_instructions,
         date(startdate) as start_date,
-        {{ rs_audit_col('',2) }},
-        {{ cdc_timestamp_col() }},
-        {{ cdc_softdelete_col() }}       
+        {{ rs_audit_cols(source('realsuite', 'equipment')) }},
+        {{ cdc_audit_cols(source('realsuite', 'equipment')) }}
     from source
 )
 

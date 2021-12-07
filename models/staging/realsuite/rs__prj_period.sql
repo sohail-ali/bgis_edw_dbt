@@ -11,11 +11,11 @@ renamed as (
         fiscalperiod_id,
         to_date(softlock_start_date) as softlock_start_date,
         to_date(softlock_end_date) as softlock_end_date,
-        updatedon as updated_date,
-        {{ cdc_timestamp_col() }}
+        {{ rs_audit_cols(source('realsuite', 'prj_period')) }},
+        {{ cdc_audit_cols(source('realsuite', 'prj_period')) }}
     from source
     where 
-        {{ cdc_softdelete_filter() }}
+        softdelete_flag='N'
 
 )
 

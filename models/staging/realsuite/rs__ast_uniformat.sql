@@ -15,9 +15,8 @@ renamed as (
         ifnull(unit_price,0) as unit_price,
         uom,
         status,
-        {{ rs_audit_col() }},        
-        {{ cdc_timestamp_col() }},
-        {{ cdc_softdelete_col() }} 
+        {{ rs_audit_cols(source('realsuite', 'ast_uniformat')) }},
+        {{ cdc_audit_cols(source('realsuite', 'ast_uniformat')) }}
     from source
 )
 

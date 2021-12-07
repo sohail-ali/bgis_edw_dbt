@@ -22,8 +22,8 @@ renamed as (
         to_date(accounting_period_enddate) as accounting_period_enddate,
         to_date(rprj_forecast_startdate) as rprj_forecast_startdate,
         to_date(rprj_forecast_enddate) as rprj_forecast_enddate,
-        {{ cdc_timestamp_col() }},
-        {{ cdc_softdelete_col() }}                 
+        {{ rs_audit_cols(source('realsuite', 'rfin_fiscalperiod')) }},
+        {{ cdc_audit_cols(source('realsuite', 'rfin_fiscalperiod')) }}
     from source
 )
 

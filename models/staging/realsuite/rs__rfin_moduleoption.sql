@@ -10,10 +10,10 @@ renamed as (
         moduleoption_id,
         client_id,
         weather_normalization,
-        {{ cdc_timestamp_col() }}
+        {{ cdc_audit_cols(source('realsuite', 'rfin_moduleoption')) }}
     from source
     where 
-      {{ cdc_softdelete_filter() }}
+      softdelete_flag='N'
 )
 
 select * from renamed

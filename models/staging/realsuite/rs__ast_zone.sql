@@ -11,9 +11,8 @@ renamed as (
         building_id,
         zone_name as assetzone_name,
         status as assetzone_status,
-        {{ rs_audit_col() }},
-        {{ cdc_timestamp_col() }},
-        {{ cdc_softdelete_col() }} 
+        {{ rs_audit_cols(source('realsuite', 'ast_zone')) }},
+        {{ cdc_audit_cols(source('realsuite', 'ast_zone')) }}
     from source
 )
 
