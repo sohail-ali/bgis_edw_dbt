@@ -9,7 +9,7 @@ with ast_project_comment as (
 
 , dim_assetproject as (
     select 
-        cast(hash(p.asset_project_id) as number(38)) as assetproject_key,
+        {{ surrogate_key('p.asset_project_id') }} as assetproject_key,
         p.asset_project_id,
         p.assetproject_name as name,
         p.assetproject_status,

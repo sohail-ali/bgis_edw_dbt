@@ -52,7 +52,7 @@ uniformat_level1 as (
 
 , dim_uniformat as (
     select 
-        cast(hash(u.uniformat_level1,u.uniformat_level2,u.uniformat_level3,u.uniformat_level4) as number(38)) as uniformat_key,
+        {{ surrogate_key('u.uniformat_level1','u.uniformat_level2','u.uniformat_level3','u.uniformat_level4') }} as uniformat_key,
         u.uniformat_level1,
         u.uniformat_level2,
         u.uniformat_level3,

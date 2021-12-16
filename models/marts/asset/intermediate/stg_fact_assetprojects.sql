@@ -10,7 +10,7 @@ with assetproject_costs as (
     group by 1
 )
 
-fact_assetprojects as (
+, fact_assetprojects as (
     select 
         asset_project_id,
         'Capital' as project_type,
@@ -21,7 +21,7 @@ fact_assetprojects as (
         p.planned_replacement_date,
         p.assetproject_number,
         p.assetproject_category,
-        c.comment as comments,
+        --c.comment as comments,
         p.softdelete_flag
     from 
         {{ ref('rs__ast_project') }} p 
@@ -29,4 +29,4 @@ fact_assetprojects as (
 
 )
 
-select 1 from dual
+select 1 as col from dual

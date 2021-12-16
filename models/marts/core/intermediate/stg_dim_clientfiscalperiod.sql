@@ -45,7 +45,7 @@ with
 
 , dim_clientfiscalperiod as (
     select 
-      cast(hash(cp.client_id,cp.thedate) as number(38)) as clientfiscalperiod_key,
+      {{ surrogate_key('cp.client_id','cp.thedate') }} as clientfiscalperiod_key,
       cp.client_id,
       cp.thedate,
       cp.fiscal_year,

@@ -20,7 +20,7 @@
         {%- set ns = namespace(override_col='') -%}
 
         {%- for x in override %}
-            {%- if col.column|lower in x and ns.override_col|length == 0 %}
+            {%- if col.column|lower in x and ns.override_col|length == 0 and col.column|lower not in except %}
                 {%- set ns.override_col = x -%}
             {%- endif -%}
         {%- endfor %} 
