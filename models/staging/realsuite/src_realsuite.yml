@@ -9,47 +9,746 @@ sources:
    loaded_at_field: dss_update_time
 
    tables:
-     - name: client
-       identifier: psa_client_ods_realsuite
+      - name: abi_conditioncode
+        identifier: psa_abi_conditioncode_ods_realsuite
 
-     - name: rfin_moduleoption
-       identifier: psa_rfin_moduleoption_ods_realsuite
+      - name: abi_conditionrating
+        identifier: psa_abi_conditionrating_ods_realsuite
 
-     - name: rpro_moduleoption
-       identifier: psa_rpro_moduleoption_ods_realsuite
+      - name: abi_structcategory
+        identifier: psa_abi_structcategory_ods_realsuite
 
-     - name: rfin_fiscalperiod
-       identifier: psa_rfin_fiscalperiod_ods_realsuite
+      - name: area
+        identifier: psa_area_ods_realsuite
 
-     - name: rfin_fiscalyear
-       identifier: psa_rfin_fiscalyear_ods_realsuite
+      - name: ast_asset
+        identifier: psa_ast_asset_ods_realsuite
 
-     - name: prj_period
-       identifier: psa_prj_period_ods_realsuite
+      - name: ast_building_value
+        identifier: psa_ast_building_value_ods_realsuite
 
-     - name: ast_project
-       identifier: psa_ast_project_ods_realsuite
+      - name: ast_comment_item
+        identifier: psa_ast_comment_item_ods_realsuite
 
-     - name: ast_comment_item
-       identifier: psa_ast_comment_item_ods_realsuite
+      - name: ast_project
+        identifier: psa_ast_project_ods_realsuite
 
-     - name: equipment
-       identifier: psa_equipment_ods_realsuite
+      - name: ast_recommended_action
+        identifier: psa_ast_recommended_action_ods_realsuite
 
-     - name: ast_zone
-       identifier: psa_ast_zone_ods_realsuite
+      - name: ast_region
+        identifier: psa_ast_region_ods_realsuite
 
-     - name: ast_uniformat
-       identifier: psa_ast_uniformat_ods_realsuite
+      - name: ast_uniformat
+        identifier: psa_ast_uniformat_ods_realsuite
 
-     - name: lookup_code
-       identifier: psa_lookup_code_ods_realsuite
+      - name: ast_zone
+        identifier: psa_ast_zone_ods_realsuite
 
-     - name: ast_asset
-       identifier: psa_ast_asset_ods_realsuite
+      - name: building_attribute
+        identifier: psa_building_attribute_ods_realsuite
 
-     - name: ast_region
-       identifier: psa_ast_region_ods_realsuite
+      - name: building_floor
+        identifier: psa_building_floor_ods_realsuite
 
-     - name: ast_building_value
-       identifier: psa_ast_building_value_ods_realsuite
+      - name: building
+        identifier: psa_building_ods_realsuite
+
+      - name: building_room
+        identifier: psa_building_room_ods_realsuite
+
+      - name: building_services
+        identifier: psa_building_services_ods_realsuite
+
+      - name: businesshour
+        identifier: psa_businesshour_ods_realsuite
+
+      - name: client_chargeaccount
+        identifier: psa_client_chargeaccount_ods_realsuite
+
+      - name: client_company
+        identifier: psa_client_company_ods_realsuite
+
+      - name: client_dept
+        identifier: psa_client_dept_ods_realsuite
+
+      - name: client_entity
+        identifier: psa_client_entity_ods_realsuite
+
+      - name: client
+        identifier: psa_client_ods_realsuite
+
+      - name: clientfloor
+        identifier: psa_clientfloor_ods_realsuite
+
+      - name: clientlocation
+        identifier: psa_clientlocation_ods_realsuite
+
+      - name: clientlocation_x_area
+        identifier: psa_clientlocation_x_area_ods_realsuite
+
+      - name: clientlocation_x_floor
+        identifier: psa_clientlocation_x_floor_ods_realsuite
+
+      - name: clientlocationaddress
+        identifier: psa_clientlocationaddress_ods_realsuite
+
+      - name: clientlocationnote
+        identifier: psa_clientlocationnote_ods_realsuite
+
+      - name: clientlocationstatus
+        identifier: psa_clientlocationstatus_ods_realsuite
+
+      - name: clientlocationuserdefinedfield
+        identifier: psa_clientlocationuserdefinedfield_ods_realsuite
+
+      - name: contact
+        identifier: psa_contact_ods_realsuite
+
+      - name: cra_answer
+        identifier: psa_cra_answer_ods_realsuite
+
+      - name: cra_question
+        identifier: psa_cra_question_ods_realsuite
+
+      - name: cra_request_type
+        identifier: psa_cra_request_type_ods_realsuite
+
+      - name: employee
+        identifier: psa_employee_ods_realsuite
+
+      - name: eqsystemtype
+        identifier: psa_eqsystemtype_ods_realsuite
+
+      - name: eqtype
+        identifier: psa_eqtype_ods_realsuite
+
+      - name: equipment
+        identifier: psa_equipment_ods_realsuite
+
+      - name: fin_gl
+        identifier: psa_fin_gl_ods_realsuite
+
+      - name: fin_gl_x_srvctype
+        identifier: psa_fin_gl_x_srvctype_ods_realsuite
+
+      - name: fin_glb_expd_category
+        identifier: psa_fin_glb_expd_category_ods_realsuite
+
+      - name: fin_glb_srvctype
+        identifier: psa_fin_glb_srvctype_ods_realsuite
+
+      - name: fin_glcategory
+        identifier: psa_fin_glcategory_ods_realsuite
+
+      - name: fin_srvctype_x_categ
+        identifier: psa_fin_srvctype_x_categ_ods_realsuite
+
+      - name: fmz
+        identifier: psa_fmz_ods_realsuite
+
+      - name: gobj_contact
+        identifier: psa_gobj_contact_ods_realsuite
+
+      - name: gobj_contact_role
+        identifier: psa_gobj_contact_role_ods_realsuite
+
+      - name: gobj_country
+        identifier: psa_gobj_country_ods_realsuite
+
+      - name: gobj_flex_fields
+        identifier: psa_gobj_flex_fields_ods_realsuite
+
+      - name: gobj_flex_object
+        identifier: psa_gobj_flex_object_ods_realsuite
+
+      - name: gobj_flex_template
+        identifier: psa_gobj_flex_template_ods_realsuite
+
+      - name: gobj_organization
+        identifier: psa_gobj_organization_ods_realsuite
+
+      - name: gobj_prov
+        identifier: psa_gobj_prov_ods_realsuite
+
+      - name: gobj_wstation
+        identifier: psa_gobj_wstation_ods_realsuite
+
+      - name: gobj_wstationdata
+        identifier: psa_gobj_wstationdata_ods_realsuite
+
+      - name: labor
+        identifier: psa_labor_ods_realsuite
+
+      - name: landlord
+        identifier: psa_landlord_ods_realsuite
+
+      - name: landlord_sites_all
+        identifier: psa_landlord_sites_all_ods_realsuite
+
+      - name: language_dictionary
+        identifier: psa_language_dictionary_ods_realsuite
+
+      - name: llsms_service
+        identifier: psa_llsms_service_ods_realsuite
+
+      - name: llsms_servicecategory
+        identifier: psa_llsms_servicecategory_ods_realsuite
+
+      - name: locationservice
+        identifier: psa_locationservice_ods_realsuite
+
+      - name: locationservicelandlord
+        identifier: psa_locationservicelandlord_ods_realsuite
+
+      - name: locationservicevendor
+        identifier: psa_locationservicevendor_ods_realsuite
+
+      - name: lookup_code
+        identifier: psa_lookup_code_ods_realsuite
+
+      - name: lookupcode
+        identifier: psa_lookupcode_ods_realsuite
+
+      - name: migration_service_mapping
+        identifier: psa_migration_service_mapping_ods_realsuite
+
+      - name: physicalfloor
+        identifier: psa_physicalfloor_ods_realsuite
+
+      - name: physicallocation
+        identifier: psa_physicallocation_ods_realsuite
+
+      - name: physicallocationaddress
+        identifier: psa_physicallocationaddress_ods_realsuite
+
+      - name: po_po_vendor_all
+        identifier: psa_po_po_vendor_all_ods_realsuite
+
+      - name: po_po_vendor_sites_all
+        identifier: psa_po_po_vendor_sites_all_ods_realsuite
+
+      - name: po_vendor_site_extra_info
+        identifier: psa_po_vendor_site_extra_info_ods_realsuite
+
+      - name: prj_actionhistorylog
+        identifier: psa_prj_actionhistorylog_ods_realsuite
+
+      - name: prj_benchmark_category
+        identifier: psa_prj_benchmark_category_ods_realsuite
+
+      - name: prj_budgetentry_line
+        identifier: psa_prj_budgetentry_line_ods_realsuite
+
+      - name: prj_budgetentry
+        identifier: psa_prj_budgetentry_ods_realsuite
+
+      - name: prj_budgetentry_type
+        identifier: psa_prj_budgetentry_type_ods_realsuite
+
+      - name: prj_budgetentry_uploadlog
+        identifier: psa_prj_budgetentry_uploadlog_ods_realsuite
+
+      - name: prj_buildings
+        identifier: psa_prj_buildings_ods_realsuite
+
+      - name: prj_category
+        identifier: psa_prj_category_ods_realsuite
+
+      - name: prj_change_management
+        identifier: psa_prj_change_management_ods_realsuite
+
+      - name: prj_contact_association
+        identifier: psa_prj_contact_association_ods_realsuite
+
+      - name: prj_eacentry
+        identifier: psa_prj_eacentry_ods_realsuite
+
+      - name: prj_fa_approval_history
+        identifier: psa_prj_fa_approval_history_ods_realsuite
+
+      - name: prj_funding_agreement_line
+        identifier: psa_prj_funding_agreement_line_ods_realsuite
+
+      - name: prj_funding_agreement
+        identifier: psa_prj_funding_agreement_ods_realsuite
+
+      - name: prj_funding_agrmt_x_project
+        identifier: psa_prj_funding_agrmt_x_project_ods_realsuite
+
+      - name: prj_milestone_activity
+        identifier: psa_prj_milestone_activity_ods_realsuite
+
+      - name: prj_period
+        identifier: psa_prj_period_ods_realsuite
+
+      - name: prj_plan
+        identifier: psa_prj_plan_ods_realsuite
+
+      - name: prj_program
+        identifier: psa_prj_program_ods_realsuite
+
+      - name: prj_project_billing
+        identifier: psa_prj_project_billing_ods_realsuite
+
+      - name: prj_project_information
+        identifier: psa_prj_project_information_ods_realsuite
+
+      - name: prj_project
+        identifier: psa_prj_project_ods_realsuite
+
+      - name: prj_project_template
+        identifier: psa_prj_project_template_ods_realsuite
+
+      - name: prj_projectflexfield
+        identifier: psa_prj_projectflexfield_ods_realsuite
+
+      - name: prj_service_type
+        identifier: psa_prj_service_type_ods_realsuite
+
+      - name: prj_sub_category
+        identifier: psa_prj_sub_category_ods_realsuite
+
+      - name: prj_sub_program
+        identifier: psa_prj_sub_program_ods_realsuite
+
+      - name: prj_task_commitment
+        identifier: psa_prj_task_commitment_ods_realsuite
+
+      - name: prj_task
+        identifier: psa_prj_task_ods_realsuite
+
+      - name: prj_task_summary
+        identifier: psa_prj_task_summary_ods_realsuite
+
+      - name: prj_template_milestone
+        identifier: psa_prj_template_milestone_ods_realsuite
+
+      - name: prj_tenant
+        identifier: psa_prj_tenant_ods_realsuite
+
+      - name: prj_wcp
+        identifier: psa_prj_wcp_ods_realsuite
+
+      - name: prj_wcpentry
+        identifier: psa_prj_wcpentry_ods_realsuite
+
+      - name: rdat_commitment_trans_log
+        identifier: psa_rdat_commitment_trans_log_ods_realsuite
+
+      - name: rdat_oca_alloc_om
+        identifier: psa_rdat_oca_alloc_om_ods_realsuite
+
+      - name: rdat_oraamg_actual_log
+        identifier: psa_rdat_oraamg_actual_log_ods_realsuite
+
+      - name: rdat_prj_expenditure
+        identifier: psa_rdat_prj_expenditure_ods_realsuite
+
+      - name: realsuite_config
+        identifier: psa_realsuite_config_ods_realsuite
+
+      - name: region
+        identifier: psa_region_ods_realsuite
+
+      - name: regions
+        identifier: psa_regions_ods_realsuite
+
+      - name: reng_account
+        identifier: psa_reng_account_ods_realsuite
+
+      - name: reng_accountutility
+        identifier: psa_reng_accountutility_ods_realsuite
+
+      - name: reng_accrual_data_rpt
+        identifier: psa_reng_accrual_data_rpt_ods_realsuite
+
+      - name: reng_charge_category
+        identifier: psa_reng_charge_category_ods_realsuite
+
+      - name: reng_invoice
+        identifier: psa_reng_invoice_ods_realsuite
+
+      - name: reng_invoicedetail
+        identifier: psa_reng_invoicedetail_ods_realsuite
+
+      - name: reng_meter
+        identifier: psa_reng_meter_ods_realsuite
+
+      - name: reng_utilityservice
+        identifier: psa_reng_utilityservice_ods_realsuite
+
+      - name: reng_utilityserviceclass
+        identifier: psa_reng_utilityserviceclass_ods_realsuite
+
+      - name: reng_utilitysrvcls_item
+        identifier: psa_reng_utilitysrvcls_item_ods_realsuite
+
+      - name: rfin_expd_category
+        identifier: psa_rfin_expd_category_ods_realsuite
+
+      - name: rfin_expdtype
+        identifier: psa_rfin_expdtype_ods_realsuite
+
+      - name: rfin_fiscalperiod
+        identifier: psa_rfin_fiscalperiod_ods_realsuite
+
+      - name: rfin_fiscalyear
+        identifier: psa_rfin_fiscalyear_ods_realsuite
+
+      - name: rfin_moduleoption
+        identifier: psa_rfin_moduleoption_ods_realsuite
+
+      - name: rfin_srvctype_category
+        identifier: psa_rfin_srvctype_category_ods_realsuite
+
+      - name: rfin_srvctype
+        identifier: psa_rfin_srvctype_ods_realsuite
+
+      - name: rfin_taxcodes_all_leg
+        identifier: psa_rfin_taxcodes_all_leg_ods_realsuite
+
+      - name: rfin_taxcodes_all
+        identifier: psa_rfin_taxcodes_all_ods_realsuite
+
+      - name: rfin_taxgrp_x_provstate
+        identifier: psa_rfin_taxgrp_x_provstate_ods_realsuite
+
+      - name: rfm_form
+        identifier: psa_rfm_form_ods_realsuite
+
+      - name: rfm_form_submit
+        identifier: psa_rfm_form_submit_ods_realsuite
+
+      - name: rhlp_atc
+        identifier: psa_rhlp_atc_ods_realsuite
+
+      - name: rhlp_caller
+        identifier: psa_rhlp_caller_ods_realsuite
+
+      - name: rhlp_callersites
+        identifier: psa_rhlp_callersites_ods_realsuite
+
+      - name: rhlp_longdescription
+        identifier: psa_rhlp_longdescription_ods_realsuite
+
+      - name: rhlp_request_category
+        identifier: psa_rhlp_request_category_ods_realsuite
+
+      - name: rhlp_request_type
+        identifier: psa_rhlp_request_type_ods_realsuite
+
+      - name: rhlp_rfstype
+        identifier: psa_rhlp_rfstype_ods_realsuite
+
+      - name: rhlp_softs_category
+        identifier: psa_rhlp_softs_category_ods_realsuite
+
+      - name: rhlp_softs_item
+        identifier: psa_rhlp_softs_item_ods_realsuite
+
+      - name: rhlp_softs_mapping
+        identifier: psa_rhlp_softs_mapping_ods_realsuite
+
+      - name: rhlp_softs_picture
+        identifier: psa_rhlp_softs_picture_ods_realsuite
+
+      - name: rhlp_softs_service
+        identifier: psa_rhlp_softs_service_ods_realsuite
+
+      - name: rhlp_softs_submission
+        identifier: psa_rhlp_softs_submission_ods_realsuite
+
+      - name: rhlp_softs_user
+        identifier: psa_rhlp_softs_user_ods_realsuite
+
+      - name: rhlp_sr_actionhistory
+        identifier: psa_rhlp_sr_actionhistory_ods_realsuite
+
+      - name: rhlp_sr_contactmethod
+        identifier: psa_rhlp_sr_contactmethod_ods_realsuite
+
+      - name: rhlp_sr_identifiedby
+        identifier: psa_rhlp_sr_identifiedby_ods_realsuite
+
+      - name: rhlp_sr_locationtype
+        identifier: psa_rhlp_sr_locationtype_ods_realsuite
+
+      - name: rhlp_sr_parent_workorder
+        identifier: psa_rhlp_sr_parent_workorder_ods_realsuite
+
+      - name: rhlp_sr_request_location
+        identifier: psa_rhlp_sr_request_location_ods_realsuite
+
+      - name: rhlp_sr_service_request_answer
+        identifier: psa_rhlp_sr_service_request_answer_ods_realsuite
+
+      - name: rhlp_sr_service_request
+        identifier: psa_rhlp_sr_service_request_ods_realsuite
+
+      - name: rhlp_sr_wo_financial_status
+        identifier: psa_rhlp_sr_wo_financial_status_ods_realsuite
+
+      - name: rhlp_woactionhistory
+        identifier: psa_rhlp_woactionhistory_ods_realsuite
+
+      - name: rhlp_woestimate_doc
+        identifier: psa_rhlp_woestimate_doc_ods_realsuite
+
+      - name: rhlp_wolabourdetail
+        identifier: psa_rhlp_wolabourdetail_ods_realsuite
+
+      - name: rhlp_womaterialdetail
+        identifier: psa_rhlp_womaterialdetail_ods_realsuite
+
+      - name: rhlp_wopriority
+        identifier: psa_rhlp_wopriority_ods_realsuite
+
+      - name: rhlp_workorder
+        identifier: psa_rhlp_workorder_ods_realsuite
+
+      - name: rhlp_wosource
+        identifier: psa_rhlp_wosource_ods_realsuite
+
+      - name: rhlp_wostatus
+        identifier: psa_rhlp_wostatus_ods_realsuite
+
+      - name: rhlp_wotype
+        identifier: psa_rhlp_wotype_ods_realsuite
+
+      - name: rlse_amendments
+        identifier: psa_rlse_amendments_ods_realsuite
+
+      - name: rlse_amendmenttype
+        identifier: psa_rlse_amendmenttype_ods_realsuite
+
+      - name: rlse_clausecategory
+        identifier: psa_rlse_clausecategory_ods_realsuite
+
+      - name: rlse_clauses
+        identifier: psa_rlse_clauses_ods_realsuite
+
+      - name: rlse_clausetype
+        identifier: psa_rlse_clausetype_ods_realsuite
+
+      - name: rlse_contact_company
+        identifier: psa_rlse_contact_company_ods_realsuite
+
+      - name: rlse_contact
+        identifier: psa_rlse_contact_ods_realsuite
+
+      - name: rlse_contact_person
+        identifier: psa_rlse_contact_person_ods_realsuite
+
+      - name: rlse_forecast
+        identifier: psa_rlse_forecast_ods_realsuite
+
+      - name: rlse_invoice
+        identifier: psa_rlse_invoice_ods_realsuite
+
+      - name: rlse_lease_all
+        identifier: psa_rlse_lease_all_ods_realsuite
+
+      - name: rlse_leasecategory
+        identifier: psa_rlse_leasecategory_ods_realsuite
+
+      - name: rlse_leasedspace
+        identifier: psa_rlse_leasedspace_ods_realsuite
+
+      - name: rlse_leaseservice
+        identifier: psa_rlse_leaseservice_ods_realsuite
+
+      - name: rlse_leaseservices_details
+        identifier: psa_rlse_leaseservices_details_ods_realsuite
+
+      - name: rlse_leasestatus
+        identifier: psa_rlse_leasestatus_ods_realsuite
+
+      - name: rlse_leasetype
+        identifier: psa_rlse_leasetype_ods_realsuite
+
+      - name: rlse_options_detail
+        identifier: psa_rlse_options_detail_ods_realsuite
+
+      - name: rlse_options
+        identifier: psa_rlse_options_ods_realsuite
+
+      - name: rlse_options_x_leasespace
+        identifier: psa_rlse_options_x_leasespace_ods_realsuite
+
+      - name: rlse_optionstatus
+        identifier: psa_rlse_optionstatus_ods_realsuite
+
+      - name: rlse_optiontype
+        identifier: psa_rlse_optiontype_ods_realsuite
+
+      - name: rlse_payments
+        identifier: psa_rlse_payments_ods_realsuite
+
+      - name: rlse_rentcategory
+        identifier: psa_rlse_rentcategory_ods_realsuite
+
+      - name: rlse_rentschedule
+        identifier: psa_rlse_rentschedule_ods_realsuite
+
+      - name: rlse_sales_category
+        identifier: psa_rlse_sales_category_ods_realsuite
+
+      - name: rlse_sales_data_header
+        identifier: psa_rlse_sales_data_header_ods_realsuite
+
+      - name: rlse_sales_data
+        identifier: psa_rlse_sales_data_ods_realsuite
+
+      - name: rlse_tenant
+        identifier: psa_rlse_tenant_ods_realsuite
+
+      - name: rlse_tenant_sites_all
+        identifier: psa_rlse_tenant_sites_all_ods_realsuite
+
+      - name: rlse_transaction_detail
+        identifier: psa_rlse_transaction_detail_ods_realsuite
+
+      - name: rlse_transaction
+        identifier: psa_rlse_transaction_ods_realsuite
+
+      - name: rlse_usecode
+        identifier: psa_rlse_usecode_ods_realsuite
+
+      - name: rman_children_jobplan
+        identifier: psa_rman_children_jobplan_ods_realsuite
+
+      - name: rman_frequency_sp_mapping
+        identifier: psa_rman_frequency_sp_mapping_ods_realsuite
+
+      - name: rman_joboperation
+        identifier: psa_rman_joboperation_ods_realsuite
+
+      - name: rman_jobplan
+        identifier: psa_rman_jobplan_ods_realsuite
+
+      - name: rman_maintenance
+        identifier: psa_rman_maintenance_ods_realsuite
+
+      - name: rman_moduleoption
+        identifier: psa_rman_moduleoption_ods_realsuite
+
+      - name: rman_pmjobplanseq
+        identifier: psa_rman_pmjobplanseq_ods_realsuite
+
+      - name: rman_pmschedule
+        identifier: psa_rman_pmschedule_ods_realsuite
+
+      - name: rman_ruleset_condition
+        identifier: psa_rman_ruleset_condition_ods_realsuite
+
+      - name: rman_ruleset
+        identifier: psa_rman_ruleset_ods_realsuite
+
+      - name: rman_scheduletemplate_jobplan
+        identifier: psa_rman_scheduletemplate_jobplan_ods_realsuite
+
+      - name: rman_scheduletemplate
+        identifier: psa_rman_scheduletemplate_ods_realsuite
+
+      - name: rman_template_simulation
+        identifier: psa_rman_template_simulation_ods_realsuite
+
+      - name: rman_uniformat_keyword
+        identifier: psa_rman_uniformat_keyword_ods_realsuite
+
+      - name: rman_uniformat_stbit_condition
+        identifier: psa_rman_uniformat_stbit_condition_ods_realsuite
+
+      - name: rman_woassetgroup_detail
+        identifier: psa_rman_woassetgroup_detail_ods_realsuite
+
+      - name: rman_woassetgroup
+        identifier: psa_rman_woassetgroup_ods_realsuite
+
+      - name: rprj_costcategory
+        identifier: psa_rprj_costcategory_ods_realsuite
+
+      - name: rprj_project
+        identifier: psa_rprj_project_ods_realsuite
+
+      - name: rprj_projectclass
+        identifier: psa_rprj_projectclass_ods_realsuite
+
+      - name: rprj_task
+        identifier: psa_rprj_task_ods_realsuite
+
+      - name: rprj_taskamount_plan
+        identifier: psa_rprj_taskamount_plan_ods_realsuite
+
+      - name: rprj_tasksum
+        identifier: psa_rprj_tasksum_ods_realsuite
+
+      - name: rpro_moduleoption
+        identifier: psa_rpro_moduleoption_ods_realsuite
+
+      - name: rsms_loc_svc_provider
+        identifier: psa_rsms_loc_svc_provider_ods_realsuite
+
+      - name: rsms_location_service
+        identifier: psa_rsms_location_service_ods_realsuite
+
+      - name: rsms_service_category
+        identifier: psa_rsms_service_category_ods_realsuite
+
+      - name: rsms_service
+        identifier: psa_rsms_service_ods_realsuite
+
+      - name: rspc_spaceclass
+        identifier: psa_rspc_spaceclass_ods_realsuite
+
+      - name: rspc_spaceclasstype
+        identifier: psa_rspc_spaceclasstype_ods_realsuite
+
+      - name: rspc_spacetype
+        identifier: psa_rspc_spacetype_ods_realsuite
+
+      - name: sec_group
+        identifier: psa_sec_group_ods_realsuite
+
+      - name: sec_member
+        identifier: psa_sec_member_ods_realsuite
+
+      - name: sec_user
+        identifier: psa_sec_user_ods_realsuite
+
+      - name: service_llsms
+        identifier: psa_service_llsms_ods_realsuite
+
+      - name: site
+        identifier: psa_site_ods_realsuite
+
+      - name: suite
+        identifier: psa_suite_ods_realsuite
+
+      - name: suitestatus
+        identifier: psa_suitestatus_ods_realsuite
+
+      - name: timezones
+        identifier: psa_timezones_ods_realsuite
+
+      - name: udfdefinition
+        identifier: psa_udfdefinition_ods_realsuite
+
+      - name: udfmapping
+        identifier: psa_udfmapping_ods_realsuite
+
+      - name: uniformat_bit_map
+        identifier: psa_uniformat_bit_map_ods_realsuite
+
+      - name: uniformat_services
+        identifier: psa_uniformat_services_ods_realsuite
+
+      - name: workorderlocation
+        identifier: psa_workorderlocation_ods_realsuite
+
+      - name: workspace
+        identifier: psa_workspace_ods_realsuite
+
+      - name: zz_client_budget
+        identifier: psa_zz_client_budget_ods_realsuite
